@@ -146,22 +146,7 @@ void analisar_elf(const char *nome_arquivo) {
     imprimir_cabecalho_elf(&cabecalho);
     imprimir_cabecalhos_secao(arquivo, &cabecalho);
     imprimir_simbolos(arquivo, &cabecalho);
-    gerar_relatorio();
     fclose(arquivo);
-}
-
-void gerar_relatorio(const char *nome_arquivo, Elf64_Ehdr *cabecalho) {
-    FILE *relatorio = fopen("relatorio.txt", "w");
-    if (!relatorio) {
-        perror("Falha ao criar o relatório");
-        return;
-    }
-
-    fprintf(relatorio, "Análise do binário: %s\n", nome_arquivo);
-    fprintf(relatorio, "Tipo ELF: %u\n", cabecalho->e_type);
-    fprintf(relatorio, "Endereço do Ponto de Entrada: 0x%lx\n", cabecalho->e_entry);
-    fprintf(relatorio, "Número de Cabeçalhos de Seção: %u\n", cabecalho->e_shnum);
-    fclose(relatorio);
 }
 
 int main(int argc, char *argv[]) {
