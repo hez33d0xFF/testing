@@ -146,7 +146,7 @@ void analisar_elf(const char *nome_arquivo) {
     imprimir_cabecalho_elf(&cabecalho);
     imprimir_cabecalhos_secao(arquivo, &cabecalho);
     imprimir_simbolos(arquivo, &cabecalho);
-
+    gerar_relatorio();
     fclose(arquivo);
 }
 
