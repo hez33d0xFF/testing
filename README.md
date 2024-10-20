@@ -29,12 +29,9 @@ Para usar o programa, execute-o passando o caminho para um arquivo ELF como argu
 ./fodase malware.elf
 ```
 
-## Saída
-
-O programa imprimirá informações sobre o cabeçalho ELF, seções e símbolos no terminal, além de gerar um arquivo `relatorio.txt` com um resumo da análise.
 
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou solicitar recursos.
+Contribuições são bem-vindas.
 
 ---
